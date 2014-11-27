@@ -1,0 +1,70 @@
+1. You must use all of the provided HTML/CSS for each exercise as part of your solution.
+
+2. DO NOT edit the HTML for any of the exercises (except the 4th one, which asks you to write your own).
+
+3. Submit both your uncompiled .scss file and the compiled .css file for all exercises.
+
+4. Solutions need to work ONLY in the newest version of Chrome.
+
+5. For all exercises:
+    - start.png is an image of what index.html will look like in the browser before any of your modifications
+    - end.png is an image of what index.html should look like in the browser after you're finished
+    - You'll need to compile the style.scss file provided before index.html will look like start.png
+
+6. Please indicate in your .scss file, using comments, which pieces of your CSS are the answer to which question (if applicable, some questions only have 1 part).
+
+  Example:
+  
+  // code for #1
+  
+  div {
+    color: red;
+  }
+  
+  // code for #2
+  
+  ul {
+    list-style: none;
+  }
+
+7. Nested selectors in SCSS count as 1 selector.
+
+  Example:
+  
+  .one {
+     div {
+      a {
+        color: black;
+      }
+    }
+  }
+  
+  Counts as 1 CSS selector, because it compiles to: .one div a { color: black; }
+
+8. Keep nested selectors as clean as possible within the context of the given HTML.
+
+  Example:
+  
+  <div class="example">
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </ul>
+  </div>
+  
+  .example {
+    ul {
+      li {
+        a {
+          color: red;
+        }
+      }
+    }
+  }
+  
+  That style is unnecessarily specific. Assuming that HTML is the complete page HTML, it should be:
+  
+  a {
+    color: red;
+  }

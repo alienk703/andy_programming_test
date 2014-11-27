@@ -1,0 +1,32 @@
+.wrapper {
+  padding: 100px 0 0 100px;
+}
+
+/*// SOLUTION STARTS HERE*/
+
+a:hover {
+  position: relative;
+  color: red;
+}
+
+a[title]:hover:after {
+  content: attr(title);
+  padding: 0.4em 2em 0.4em 0.4em;
+  color: white;
+  position: absolute;
+  left: 0; 
+  bottom: 160%;
+  white-space: nowrap; 
+  border-radius: 5px;  
+  background-color: rgb(210,210,210);
+}
+
+a:hover:before {
+  content: '';
+  bottom: 24px;
+  left: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgb(210,210,210);
+  position: absolute;
+}
