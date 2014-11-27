@@ -4,10 +4,7 @@ $(document).ready(function() {
 
   // How often it outputs a character
   var delay = 100;
-
   var count = 0;
-
-
 
   function writeText() {
     // Code goes here
@@ -18,16 +15,10 @@ $(document).ready(function() {
     setTimeout(writeText, delay);
     $('.typewriter').append(character(count, count+1, words));
     count++;
-   
   }
 
   // calls the first words element, 'Awesome People', and not the rest;
   writeText(words[0]); 
-
-
-
-
-
 
 
 
